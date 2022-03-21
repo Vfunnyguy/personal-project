@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+hr{
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+@mixin paddingBox($x,$y) {
+    padding: $x $y;
+    
+}
+#container{
+    @include paddingBox(0 ,8px );
+    margin-top: 16px
+}
+#left-section{
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    width: 462px;
+    height: auto;
+    padding: 0.01em ,16px;
+    .avatar-box{
+        position: relative;
+        img{
+
+            width: 100%;
+            height: 355px;
+        }
+        &__name{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            @include paddingBox(0.01em,16px );
+            color: #fff;
+
+        }
+    }
+    #bottom-left{
+        padding: 0.01em 16px;
+    
+    .contact-info{
+        // padding-top: 0.01em;
+        // padding-bottom: 0.01em;
+        // padding-left: 16px;
+        // padding-right: 16px;
+        .contact-link{
+            margin: 15px 0;
+            i{
+                margin-right: 16px;
+                color: rgb(20, 61, 197);
+                font-size: 16px;
+            }
+            a{
+                color: #333;
+            }
+        }
+    }
+    .skill__label{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        span{
+            padding: 5px 0;
+            margin-right: 5px;
+        }
+    }
+    }
+}
